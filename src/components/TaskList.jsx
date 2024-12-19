@@ -3,7 +3,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import TaskItem from './TaskItem';
 
 function TaskList({ tasks, toggleComplete, deleteTask }) {
-    const nodeRef = useRef(null);
+    const nodeRef = useRef(null);// hadi diale transitiongrp
 
     return (
         <TransitionGroup>

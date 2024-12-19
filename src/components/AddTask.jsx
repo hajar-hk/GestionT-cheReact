@@ -5,7 +5,7 @@ function AddTask({addTask}){
 
     const handlSubmit = (e) =>{
         e.preventDefault();
-        if(taskText.trim()){
+        if(taskText.trim()){//vérifie si le texte de la tâche n'est pas vide ou uniquement constitué d'espaces.
             addTask(taskText);
             setTaskText('');
         }
@@ -18,7 +18,7 @@ function AddTask({addTask}){
                 type= "text"
                 placeholder="Nouvelle tâche"
                 value={taskText}
-                onChange={(e) => setTaskText(e.target.value)}
+                onChange={(e) => setTaskText(e.target.value)}//met à jour l'état taskText chaque fois que l'utilisateur saisit quelque chose dans le champ de texte. Cela permet au composant d'afficher toujours la valeur actuelle de l'entrée
                  /> 
                  <button type="submit">Ajouter</button>
             </form>
